@@ -1,0 +1,49 @@
+{
+  "actorSpecification": 1,
+  "name": "page-change-monitor",
+  "title": "Page Change Monitor: Detect Text Changes on Any Web Page",
+  "version": "0.0",
+  "buildTag": "latest",
+  "input": "./input_schema.json",
+  "storages": {
+    "dataset": {
+      "actorSpecification": 1,
+      "views": {
+        "changes": {
+          "title": "Change report",
+          "transformation": {
+            "fields": [
+              "url",
+              "status",
+              "added",
+              "removed",
+              "checkedAt"
+            ]
+          },
+          "display": {
+            "component": "table",
+            "properties": {
+              "url": {
+                "label": "Address"
+              },
+              "status": {
+                "label": "Result"
+              },
+              "added": {
+                "label": "Added lines"
+              },
+              "removed": {
+                "label": "Removed lines"
+              },
+              "checkedAt": {
+                "label": "Checked at"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "dockerfile": "./Dockerfile",
+  "output": "./output_schema.json"
+}

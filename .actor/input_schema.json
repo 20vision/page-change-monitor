@@ -1,0 +1,10 @@
+{
+  "title": "Page Change Monitor input",
+  "type": "object",
+  "schemaVersion": 1,
+  "properties": {
+    "urls": { "title": "Page addresses", "type": "array", "description": "Pages to watch, one address per line. Each run compares every page with the text saved by the previous run.", "editor": "stringList", "prefill": ["https://www.myclawn.com"] },
+    "selector": { "title": "CSS selector (optional)", "type": "string", "description": "Watch only the part of the page that matches, for example main or #pricing. Empty means the whole page text.", "editor": "textfield" }
+  },
+  "required": ["urls"]
+}

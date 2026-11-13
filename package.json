@@ -1,0 +1,9 @@
+{
+  "name": "page-change-monitor",
+  "version": "0.0.1",
+  "type": "module",
+  "description": "page-change-monitor Apify actor",
+  "dependencies": { "apify": "^3.5.0", "crawlee": "^3.13.0", "cheerio": "^1.0.0" },
+  "scripts": { "start": "node src/main.js" },
+  "license": "MIT"
+}
